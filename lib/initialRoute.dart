@@ -95,7 +95,7 @@ class _InitialRouteState extends State<InitialRoute> {
                             Dismissible(
                                 key: Key(item),
                                 background:Container(color:Colors.red[600]),
-                                onChanged: (){
+                                onChanged: (direction){
                                     setState((){
                                         listtaskTitle.removeAt(index);
                                           listtaskDesp.removeAt(index);
