@@ -89,7 +89,7 @@ class _InitialRouteState extends State<InitialRoute> {
                   : ListView.builder(
                       itemCount: listtaskTitle.length,
                       itemBuilder: (context, index) {
-                        final item = listtaskTitle.length-index;
+                        final item = listtaskTitle[index];
                         return Column(
                           children: [
                             Dismissible(
@@ -102,7 +102,9 @@ class _InitialRouteState extends State<InitialRoute> {
                                           taskctr--;
                                     });
                                 },
-                                child:Card(
+                                child:(listtasktitle[index]==null)?
+                                SizedBox(height:0)
+                                :Card(
                                 elevation: 2.0,
                                 color: Colors.black87,
                                 margin: EdgeInsets.all(3),
