@@ -89,9 +89,20 @@ class _InitialRouteState extends State<InitialRoute> {
                   : ListView.builder(
                       itemCount: listtaskTitle.length,
                       itemBuilder: (context, index) {
+                        final item = listtaskTitle[index];
                         return Column(
                           children: [
-                            Card(
+                            Dismissible(
+                                key: Key(item),
+                                background:Container(color:Colors.red[600]),
+                                onChanged: (){
+                                    setState((){
+                                        listtaskTitle.removeAt(index);
+                                          listtaskDesp.removeAt(index);
+                                          taskctr--;
+                                    });
+                                },
+                                child:Card(
                                 elevation: 2.0,
                                 color: Colors.black87,
                                 margin: EdgeInsets.all(3),
@@ -120,17 +131,8 @@ class _InitialRouteState extends State<InitialRoute> {
                                         fontSize: 14,
                                       ),
                                     ),
-                                    trailing: GestureDetector(
-                                      onTap: () {
-                                        setState(() {
-                                          listtaskTitle.removeAt(index);
-                                          listtaskDesp.removeAt(index);
-                                          taskctr--;
-                                        });
-                                      },
-                                      child: Icon(Icons.delete,
-                                          color: Colors.grey[50]),
-                                    ))),
+                                    )),//Card
+                            ),
                             index == (listtaskTitle.length - 1)
                                 ? SizedBox(
                                     height: devsize.height * 0.1,
