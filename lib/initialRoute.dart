@@ -228,7 +228,7 @@ class _InitialRouteState extends State<InitialRoute> {
                                     sheetState(() {
                                       bottomSheetpage = 0;
                                     });
-                                    if(taskTitle!=null){
+                                    if(taskTitle!=''){
                                     listtaskTitle.add(taskTitle);
                                     listtaskDesp.add(taskDesp);
                                     
