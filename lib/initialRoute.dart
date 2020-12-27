@@ -233,14 +233,12 @@ class _InitialRouteState extends State<InitialRoute> {
                                     if(taskTitle!=''){
                                     listtaskTitle.add(taskTitle);
                                     listtaskDesp.add(taskDesp);
-                                    
                                     taskctr++;
+                                    }
                                     con1.text = '';
                                     con2.text = '';
                                     taskTitle = '';
                                     taskDesp = '';
-                                    }
-                                    
                                   });
                                 }
                               },
