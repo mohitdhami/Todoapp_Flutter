@@ -126,6 +126,7 @@ class _InitialRouteState extends State<InitialRoute> {
                                         fontSize: 18,
                                       ),
                                     ),
+                                    (listtaskDesp=='')?null:
                                     subtitle: Text(
                                       '▫ ${listtaskDesp[index]}',
                                       style: TextStyle(
@@ -182,7 +183,7 @@ class _InitialRouteState extends State<InitialRoute> {
                                 contentPadding: EdgeInsets.only(left: 20),
                                 hintText: (bottomSheetpage == 0)
                                     ? ' Enter Task Title'
-                                    : 'Enter Description',
+                                    : 'Enter Description ( Optional )',
                                 hintStyle: TextStyle(
                                   color: Colors.grey[50],
                                   fontSize: 15,
