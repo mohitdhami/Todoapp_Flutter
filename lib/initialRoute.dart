@@ -89,7 +89,7 @@ class _InitialRouteState extends State<InitialRoute> {
                   : ListView.builder(
                       itemCount: listtaskTitle.length,
                       itemBuilder: (context, index) {
-                        final item = index;
+                        final item = listtaskTitle.length-index;
                         return Column(
                           children: [
                             Dismissible(
