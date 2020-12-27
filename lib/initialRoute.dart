@@ -102,7 +102,7 @@ class _InitialRouteState extends State<InitialRoute> {
                                           taskctr--;
                                     });
                                 },
-                                child:(listtasktitle[index]==null)?
+                                child: (listtaskTitle[index]==null)?
                                 SizedBox(height:0)
                                 :Card(
                                 elevation: 2.0,
@@ -228,6 +228,7 @@ class _InitialRouteState extends State<InitialRoute> {
                                     sheetState(() {
                                       bottomSheetpage = 0;
                                     });
+                                    if(taskTitle!=null){
                                     listtaskTitle.add(taskTitle);
                                     listtaskDesp.add(taskDesp);
                                     
@@ -236,6 +237,8 @@ class _InitialRouteState extends State<InitialRoute> {
                                     con2.text = '';
                                     taskTitle = '';
                                     taskDesp = '';
+                                    }
+                                    
                                   });
                                 }
                               },
