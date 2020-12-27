@@ -126,8 +126,9 @@ class _InitialRouteState extends State<InitialRoute> {
                                         fontSize: 18,
                                       ),
                                     ),
-                                    (listtaskDesp=='')?null:
-                                    subtitle: Text(
+                                    subtitle: (listtaskDesp=='')?
+                                    Text(''):
+                                     Text(
                                       '▫ ${listtaskDesp[index]}',
                                       style: TextStyle(
                                         color: Colors.grey[50],
